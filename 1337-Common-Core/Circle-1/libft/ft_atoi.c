@@ -6,15 +6,11 @@
 /*   By: aait-our <aait-our@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 10:47:07 by aait-our          #+#    #+#             */
-/*   Updated: 2024/10/25 11:52:38 by aait-our         ###   ########.fr       */
+/*   Updated: 2024/10/30 15:36:25 by aait-our         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
-//#include <stdio.h>
-//#include <stdlib.h>
-//#include <libft.h>
+#include "libft.h"
 int	ft_atoi(char *str)
 {
     int i;

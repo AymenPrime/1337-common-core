@@ -6,15 +6,14 @@
 /*   By: aait-our <aait-our@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 10:47:41 by aait-our          #+#    #+#             */
-/*   Updated: 2024/10/25 11:52:48 by aait-our         ###   ########.fr       */
+/*   Updated: 2024/10/30 15:37:01 by aait-our         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 
-//#include <stdio.h>
-//#include <ctype.h>
-//#include <libft.h>
+
+#include "libft.h"
 
     int ft_isalnum(int c) {
         if((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') 

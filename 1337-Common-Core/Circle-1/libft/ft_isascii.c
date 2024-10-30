@@ -6,15 +6,11 @@
 /*   By: aait-our <aait-our@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 10:48:02 by aait-our          #+#    #+#             */
-/*   Updated: 2024/10/25 11:52:57 by aait-our         ###   ########.fr       */
+/*   Updated: 2024/10/30 15:37:36 by aait-our         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
-//#include <stdio.h>
-//#include <ctype.h>
-//#include <libft.h>
+#include "libft.h"
 
 int ft_isascii(int c) {
     if(c >= 0 && c <= 127) {

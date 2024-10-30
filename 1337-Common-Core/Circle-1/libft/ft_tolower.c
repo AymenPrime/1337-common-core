@@ -6,14 +6,11 @@
 /*   By: aait-our <aait-our@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 10:49:26 by aait-our          #+#    #+#             */
-/*   Updated: 2024/10/25 11:53:22 by aait-our         ###   ########.fr       */
+/*   Updated: 2024/10/30 16:29:37 by aait-our         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
-//#include <stdio.h>
-//#include <libft.h>
+#include "libft.h"
 
 int ft_tolower(int c) {
         if(c >= 65  && c <= 90) {

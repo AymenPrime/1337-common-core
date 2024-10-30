@@ -6,13 +6,13 @@
 /*   By: aait-our <aait-our@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 10:47:14 by aait-our          #+#    #+#             */
-/*   Updated: 2024/10/25 11:52:43 by aait-our         ###   ########.fr       */
+/*   Updated: 2024/10/30 11:05:21 by aait-our         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
-#include <stddef.h>
-//#include <libft.h>
+
+#include "libft.h"
 
 void ft_bzero(void *b, size_t n) {
     size_t i = 0;

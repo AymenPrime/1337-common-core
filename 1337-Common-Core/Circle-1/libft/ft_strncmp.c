@@ -1,29 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aait-our <aait-our@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/24 10:48:09 by aait-our          #+#    #+#             */
-/*   Updated: 2024/10/25 11:53:00 by aait-our         ###   ########.fr       */
+/*   Created: 2024/10/30 15:41:37 by aait-our          #+#    #+#             */
+/*   Updated: 2024/10/30 15:41:58 by aait-our         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
-//#include <stdio.h>
-//#include <ctype.h>
-//#include <libft.h>
-
-int ft_isdigit(int c) {
-    if(c >= '0' && c <= '9')
-        return 1;
-
-    return 0;
+int	ft_strncmp(const char *s1, const char *s2, size_t n) {
+	size_t	i;
+	if(n == 0) {
+		return 0;
+	}
+	i = 0;
+	while(i < n) {
+		if(s1[i] != s2[i]) {
+			return s1[i] - s2[i];
+		}
+		if(s1[i] == '\0' || s2[i] == '\0')
+			return 0;
+	i++;
+	}
+	return 0;
 }
 
 /*int main() {
-    int c = 49;
-    printf("%d\n", ft_isdigit(c));
-    printf("%d\n", isdigit(c));
+	char s1[] = "bmen";
+	char s2[] = "aymen";
+	printf("%d", ft_strncmp(s1, s2, 3));
+	printf("%d", strncmp(s1, s2, 3));
 }*/

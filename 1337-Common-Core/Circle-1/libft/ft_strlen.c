@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aait-our <aait-our@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/24 10:48:20 by aait-our          #+#    #+#             */
-/*   Updated: 2024/10/25 11:53:04 by aait-our         ###   ########.fr       */
+/*   Created: 2024/10/24 10:49:12 by aait-our          #+#    #+#             */
+/*   Updated: 2024/10/30 15:41:06 by aait-our         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
-
-//#include <stdio.h>
-//#include <libft.h>
-
-int ft_isprint(int c) {
-    if(c >= 32 && c <= 126) {
-        return 1;
+int ft_strlen(const char *str) {
+    int i = 0;
+    
+    while(str[i]) {
+        i++;
     }
-    return 0;
+    return i;
 }
 
 /*int main() {
-    int c = 27;
-
-    printf("%d\n", ft_isprint(c));
+    char str[] = "aymen ";
+    char one = ft_strlen(str);
+    printf("%d\n", one);
 }*/
