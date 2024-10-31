@@ -34,6 +34,6 @@ size_t len) {
         r[k] = '\0';
         return (r);     
 }
-int main() {
+/*int main() {
         printf("%s\n", "aymen", 1, 3);
-}
+}*/

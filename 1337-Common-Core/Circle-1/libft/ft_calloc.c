@@ -22,8 +22,8 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	return (ptr);
 }
 
-int main()
+/*int main()
 {
 	char *ptr = ft_calloc(10, 1);
 	printf("%s\n", ptr);
-}
+}*/

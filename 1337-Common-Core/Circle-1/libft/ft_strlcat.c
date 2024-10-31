@@ -33,6 +33,6 @@ size_t ft_strlcat(char *dest, const char *src, size_t size) {
     dest[destLen] = '\0';
     return (l + srcLen);
 }
-int main() {
+/*int main() {
     printf("%ld\n", ft_strlcat("Hello, ", "World", 10));
-}
+}*/
