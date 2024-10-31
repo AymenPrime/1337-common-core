@@ -1,35 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/31 18:47:50 by marvin            #+#    #+#             */
-/*   Updated: 2024/10/31 18:47:50 by marvin           ###   ########.fr       */
+/*   Created: 2024/10/31 18:02:15 by marvin            #+#    #+#             */
+/*   Updated: 2024/10/31 18:02:15 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
-char *ft_strrchr(const char *s, int c) {
-    const char *str;
-    int i;
 
-    str = (char *)s;
-    i = strlen(s);
+int	ft_memcmp(const void *s1, const void *s2, size_t n) {
+	size_t i;
 
-    while (i >= 0) {
-        if (s[i] == (char)c)
-            return (char *)&str[i];
-        i--;
-    }
-    return (NULL);
+	i = 0;
+
+	while(i < n) {
+		if (((unsigned char*)s1)[i] != ((unsigned char*)s2)[i])
+					return ((unsigned char*)s1)[i] - ((unsigned char*)s2)[i];
+						i++;
+						}
+						return 0;
 }
 
 int main() {
-    char str[] = "Hello, World!";
-    char ch;
-    printf("%s", ft_strrchr(str, ch));
-    return 0;
-}
+	printf("%d", ft_memcmp("aymdn", "aymen", 2));+
+}*/
