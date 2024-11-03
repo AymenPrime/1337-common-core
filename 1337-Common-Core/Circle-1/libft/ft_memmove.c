@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aait-our <aait-our@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 23:33:47 by aait-our          #+#    #+#             */
-/*   Updated: 2024/11/03 02:59:09 by aait-our         ###   ########.fr       */
+/*   Updated: 2024/11/03 11:07:36 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ static char	*ft_strncpy(char *dest, const char *src, size_t n)
 	}
 	return (dest);
 }
+
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	char	*dst;
@@ -40,7 +41,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	if (dst == sr)
 		return (dst);
 	if (dst < sr)
-		ft_strncpy(dst, sr, n );
+		ft_strncpy(dst, sr, n);
 	else
 	{
 		i = n;
@@ -50,10 +51,9 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 			i--;
 		}
 	}
-	return dst;
+	return (dst);
 }
-#include <string.h>
-
+/*#include <string.h>
 int	main(void)
 {
 	char buffer[] = "aymen lifop";
@@ -62,4 +62,4 @@ int	main(void)
 	//  memmove(buffer + 2, buffer, 6);
 	// printf("%s\n", buffer);
 	return (0);
-}
+}*/
