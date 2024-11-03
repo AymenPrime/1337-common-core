@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 23:20:27 by aait-our          #+#    #+#             */
-/*   Updated: 2024/11/03 11:08:58 by marvin           ###   ########.fr       */
+/*   Updated: 2024/11/03 11:20:53 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ char			*ft_strnstr(const char *haystack, const char *needle,
 					size_t len);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
 char			*ft_strdup(const char *s);
+char			*ft_strjoin(char const *s1, char const *s2);
 static int		len(int num);
 char			*ft_itoa(int nb);
 int				ft_tolower(int c);
