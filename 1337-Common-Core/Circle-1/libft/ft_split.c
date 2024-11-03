@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aait-our <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: aait-our <aait-our@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 20:34:37 by aait-our          #+#    #+#             */
-/*   Updated: 2024/11/02 20:37:47 by aait-our         ###   ########.fr       */
+/*   Updated: 2024/11/02 23:17:03 by aait-our         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<string.h>
-#include<stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 static int	ft_count_word(char const *s, char c)
 {
@@ -37,8 +37,8 @@ static int	ft_count_word(char const *s, char c)
 	return (count);
 }
 /*int main() {
-    char str[] = "jfjd jfj fj";
-    printf("%d\n", ft_count_word(str, 'f'));
+	char str[] = "jfjd jfj fj";
+	printf("%d\n", ft_count_word(str, 'f'));
 }*/
 
 static int	word_len(char const *s, char c)
@@ -52,7 +52,7 @@ static int	word_len(char const *s, char c)
 }
 
 static char	*alloc_word(char const *s, char c)
-{ 
+{
 	char	*word;
 	int		len;
 	int		i;
@@ -111,13 +111,17 @@ char	**ft_split(char const *s, char c)
 	}
 	return (strs);
 }
-int main() {
-    char **x = ft_split("aymen anass waissi", ' ');
-    int i = 0;
+/*int	main(void)
+{
+	char	**x;
+	int		i;
 
-    while(x[i]) {
-    	printf("%s\n", x[i]);
-	i++;
-    }
-    return 0;
-}
+	x = ft_split("aymen anass waissi", ' ');
+	i = 0;
+	while (x[i])
+	{
+		printf("%s\n", x[i]);
+		i++;
+	}
+	return (0);
+}*/

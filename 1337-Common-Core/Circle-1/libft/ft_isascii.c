@@ -6,21 +6,23 @@
 /*   By: aait-our <aait-our@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 10:48:02 by aait-our          #+#    #+#             */
-/*   Updated: 2024/10/30 15:37:36 by aait-our         ###   ########.fr       */
+/*   Updated: 2024/11/02 23:13:58 by aait-our         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isascii(int c) {
-    if(c >= 0 && c <= 127) {
-        return 1;
-    }
-    return 0;
+int	ft_isascii(int c)
+{
+	if (c >= 0 && c <= 127)
+	{
+		return (1);
+	}
+	return (0);
 }
 /*int main() {
-    int c = 200;
-    printf("%d\n", ft_isascii(c));
-    printf("%d\n", isascii(c));
+	int c = 200;
+	printf("%d\n", ft_isascii(c));
+	printf("%d\n", isascii(c));
 
 }*/

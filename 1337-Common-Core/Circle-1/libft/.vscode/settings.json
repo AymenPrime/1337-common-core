@@ -4,7 +4,7 @@
   "C_Cpp_Runner.debuggerPath": "gdb",
   "C_Cpp_Runner.cStandard": "",
   "C_Cpp_Runner.cppStandard": "",
-  "C_Cpp_Runner.msvcBatchPath": "C:/Program Files/Microsoft Visual Studio/VR_NR/Community/VC/Auxiliary/Build/vcvarsall.bat",
+  "C_Cpp_Runner.msvcBatchPath": "",
   "C_Cpp_Runner.useMsvc": false,
   "C_Cpp_Runner.warnings": [
     "-Wall",
@@ -38,7 +38,10 @@
   "C_Cpp_Runner.compilerArgs": [],
   "C_Cpp_Runner.linkerArgs": [],
   "C_Cpp_Runner.includePaths": [],
-  "C_Cpp_Runner.includeSearch": ["*", "**/*"],
+  "C_Cpp_Runner.includeSearch": [
+    "*",
+    "**/*"
+  ],
   "C_Cpp_Runner.excludeSearch": [
     "**/build",
     "**/build/**",
@@ -52,25 +55,5 @@
   "C_Cpp_Runner.useLeakSanitizer": false,
   "C_Cpp_Runner.showCompilationTime": false,
   "C_Cpp_Runner.useLinkTimeOptimization": false,
-  "C_Cpp_Runner.msvcSecureNoWarnings": false,
-  "workbench.colorCustomizations": {
-    "activityBar.activeBackground": "#33ffff",
-    "activityBar.background": "#33ffff",
-    "activityBar.foreground": "#15202b",
-    "activityBar.inactiveForeground": "#15202b99",
-    "activityBarBadge.background": "#ff60ff",
-    "activityBarBadge.foreground": "#15202b",
-    "commandCenter.border": "#15202b99",
-    "sash.hoverBorder": "#33ffff",
-    "sideBar.border": "#33ffff",
-    "statusBar.background": "#00ffff",
-    "statusBar.foreground": "#15202b",
-    "statusBarItem.hoverBackground": "#00cccc",
-    "statusBarItem.remoteBackground": "#00ffff",
-    "statusBarItem.remoteForeground": "#15202b",
-    "titleBar.activeBackground": "#00ffff",
-    "titleBar.activeForeground": "#15202b",
-    "titleBar.inactiveBackground": "#00ffff99",
-    "titleBar.inactiveForeground": "#15202b99"
-  }
+  "C_Cpp_Runner.msvcSecureNoWarnings": false
 }

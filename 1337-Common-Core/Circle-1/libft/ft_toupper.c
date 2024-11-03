@@ -6,20 +6,22 @@
 /*   By: aait-our <aait-our@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 10:49:29 by aait-our          #+#    #+#             */
-/*   Updated: 2024/10/30 20:53:51 by aait-our         ###   ########.fr       */
+/*   Updated: 2024/11/02 23:18:14 by aait-our         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_toupper(int c) {
-    if(c >= 97 && c <= 122) {
-        c -= 32;
-    }
-    return c;
+int	ft_toupper(int c)
+{
+	if (c >= 97 && c <= 122)
+	{
+		c -= 32;
+	}
+	return (c);
 }
 
 /*int main() {
-    int c = 65;
-    printf("%c\n", ft_toupper(c));
+	int c = 65;
+	printf("%c\n", ft_toupper(c));
 }*/

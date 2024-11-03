@@ -3,32 +3,34 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aait-our <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: aait-our <aait-our@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 20:38:07 by aait-our          #+#    #+#             */
-/*   Updated: 2024/11/02 22:03:22 by aait-our         ###   ########.fr       */
+/*   Updated: 2024/11/02 23:14:10 by aait-our         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
-static int len(int num) {
+#include <stdio.h>
+
+static int	len(int num)
+{
 	int	i;
-	
+
 	i = 0;
-	if(num == 0)
+	if (num == 0)
 		i = 1;
-	if(num < 0)
+	if (num < 0)
 	{
-		i = 1; 
+		i = 1;
 		num = -num;
 	}
-	while(num != 0)
+	while (num != 0)
 	{
 		num /= 10;
 		i++;
 	}
-	return i;
+	return (i);
 }
 
 /*int main() {
@@ -36,17 +38,16 @@ static int len(int num) {
 	printf("%d\n", len(nb));
 }*/
 
-char* ft_itoa(int nb)
+char	*ft_itoa(int nb)
 {
-	int	i;
-	int	leng;
-	int	n;
+	int		i;
+	int		leng;
+	int		n;
 	char	*new;
-	
+
 	leng = len(nb);
 	new = (char *)malloc(leng + 1);
-
-	if(nb < 0) 
+	if (nb < 0)
 		n = -nb;
 	else
 		n = nb;
@@ -59,10 +60,13 @@ char* ft_itoa(int nb)
 			new[i] = '-';
 		i--;
 	}
-	return new;
+	return (new);
 }
 
-int main() {
-        int nb = -4546;
-        printf("%s\n", ft_itoa(nb));
+int	main(void)
+{
+	int	nb;
+
+	nb = -4546;
+	printf("%s\n", ft_itoa(nb));
 }

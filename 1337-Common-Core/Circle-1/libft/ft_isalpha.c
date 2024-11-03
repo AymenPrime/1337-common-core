@@ -6,22 +6,24 @@
 /*   By: aait-our <aait-our@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 10:47:53 by aait-our          #+#    #+#             */
-/*   Updated: 2024/10/30 15:37:21 by aait-our         ###   ########.fr       */
+/*   Updated: 2024/11/02 23:13:54 by aait-our         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isalpha(int c) { 
-        if((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')) {
-                return 1;
-            }
-        return 0;
+int	ft_isalpha(int c)
+{
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+	{
+		return (1);
+	}
+	return (0);
 }
 
 /*int main() {
-    int c = 122;
-    int c1 = 121;
-    printf("%d\n", ft_isalpha(c));
-    printf("%d\n", ft_isalpha(c1));
+	int c = 122;
+	int c1 = 121;
+	printf("%d\n", ft_isalpha(c));
+	printf("%d\n", ft_isalpha(c1));
 }*/

@@ -6,7 +6,7 @@
 /*   By: aait-our <aait-our@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 22:02:36 by aait-our          #+#    #+#             */
-/*   Updated: 2024/10/30 15:36:44 by aait-our         ###   ########.fr       */
+/*   Updated: 2024/11/02 23:15:17 by aait-our         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,9 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;
+
 	ptr = (void *)malloc(nmemb * size);
-	if(!ptr)
+	if (!ptr)
 		return (NULL);
 	ft_bzero(ptr, nmemb * size);
 	return (ptr);
