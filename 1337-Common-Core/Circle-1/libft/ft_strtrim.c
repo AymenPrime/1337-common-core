@@ -1,41 +1,31 @@
-#include <string.h>
-char    *ft_substr(char const *s, unsigned int start, size_t len)
-{
-    size_t    i;
-    size_t    k;
-    char    *r;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/03 15:04:13 by marvin            #+#    #+#             */
+/*   Updated: 2024/11/03 15:04:13 by marvin           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-    r = (char *)malloc(sizeof(*s) * (len + 1));
-    if (!r)
-        return (NULL);
-    i = 0;
-    k = 0;
-    while (s[i])
-    {
-        if (i >= start && k < len)
-        {
-            r[k] = s[i];
-            k++;
-        }
-        i++;
-    }
-    r[k] = '\0';
-    return (r);
-}
+#include "libft.h"
+
 char    *ft_strtrim(char const *s1, char const *set) {
     
     int     start;
     int     end;
     char    *result;
 
-    if (!s1 ||  !set)
-        return NULL;
+    if (!s1)
+        return "";
     start = 0;
-    while (s1[start] && strchr(set, s1[start])) {
+    while (s1[start] && ft_strchr(set, s1[start])) {
         start++;
     }
-    end = strlen(s1);
-    while (start < end && strchr(set, s1[end - 1])) {
+    end = ft_strlen(s1);
+    while (start < end && ft_strchr(set, s1[end - 1])) {
         end--;
     }
     
@@ -45,5 +35,6 @@ char    *ft_strtrim(char const *s1, char const *set) {
 }
 
 int main() {
-  printf("%s\n", ft_strtrim("@@@---a-yme@@n--@@--", "@-"));
+    char str[10];
+  printf("%s\n", ft_strtrim(str, "-"));
   }

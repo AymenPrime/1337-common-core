@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aait-our <aait-our@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 10:47:07 by aait-our          #+#    #+#             */
-/*   Updated: 2024/11/02 23:11:45 by aait-our         ###   ########.fr       */
+/*   Updated: 2024/11/04 09:47:27 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ int	ft_atoi(char *str)
 		result = result * 10 + (str[i] - 48);
 		i++;
 	}
+	return (sign * result);
 }
 
 /*int main() {
