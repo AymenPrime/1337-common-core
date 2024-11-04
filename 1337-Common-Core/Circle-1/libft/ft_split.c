@@ -6,13 +6,11 @@
 /*   By: aait-our <aait-our@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 20:34:37 by aait-our          #+#    #+#             */
-/*   Updated: 2024/11/02 23:17:03 by aait-our         ###   ########.fr       */
+/*   Updated: 2024/11/04 20:39:07 by aait-our         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "libft.h"
 
 static int	ft_count_word(char const *s, char c)
 {
@@ -40,34 +38,26 @@ static int	ft_count_word(char const *s, char c)
 	char str[] = "jfjd jfj fj";
 	printf("%d\n", ft_count_word(str, 'f'));
 }*/
-
-static int	word_len(char const *s, char c)
-{
-	int	i;
-
-	i = 0;
-	while (s[i] && s[i] != c)
-		i++;
-	return (i);
-}
-
 static char	*alloc_word(char const *s, char c)
 {
 	char	*word;
 	int		len;
 	int		i;
+	int		j;
 
-	len = word_len(s, c);
+	j = 0;
+	while (s[j] && s[j] != c)
+		j++;
 	i = 0;
-	word = (char *)malloc(word_len(s, c) + 1);
+	word = (char *)malloc(j + 1);
 	if (!word)
 		return (NULL);
-	while (i < len)
+	while (i < j)
 	{
 		word[i] = s[i];
 		i++;
 	}
-	word[len] = '\0';
+	word[j] = '\0';
 	return (word);
 }
 
@@ -86,7 +76,8 @@ static int	first_split(char **str, char const *s, char c)
 			if (!str[j])
 				return (0);
 			j++;
-			i += word_len(&s[i], c);
+			while(s[i] && s[i] != c)
+				i++;
 		}
 		else
 			i++;
@@ -111,17 +102,17 @@ char	**ft_split(char const *s, char c)
 	}
 	return (strs);
 }
-/*int	main(void)
-{
-	char	**x;
-	int		i;
+// int	main(void)
+// {
+// 	char	**x;
+// 	int		i;
 
-	x = ft_split("aymen anass waissi", ' ');
-	i = 0;
-	while (x[i])
-	{
-		printf("%s\n", x[i]);
-		i++;
-	}
-	return (0);
-}*/
+// 	x = ft_split("-----aymen----anass------waissi----------", '-');
+// 	i = 0;
+// 	while (x[i])
+// 	{
+// 		printf("%s\n", x[i]);
+// 		i++;
+// 	}
+// 	return (0);
+// }

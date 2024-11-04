@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aait-our <aait-our@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/02 23:32:56 by aait-our          #+#    #+#             */
-/*   Updated: 2024/11/02 23:33:03 by aait-our         ###   ########.fr       */
+/*   Created: 2024/11/04 14:33:32 by aait-our          #+#    #+#             */
+/*   Updated: 2024/11/04 15:44:46 by aait-our         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,10 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
+// #include <string.h>
 
-/*int main() {
-	printf("%d", ft_memcmp("aymdn", "aymen", 2));+
-}*/
+//  int	main(void)
+//  {
+//     //char str[] = "aymen";
+//     printf("%d\n", memcmp("khizo", "btata", 2));
+// }

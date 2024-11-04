@@ -6,22 +6,23 @@
 /*   By: aait-our <aait-our@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 15:40:21 by aait-our          #+#    #+#             */
-/*   Updated: 2024/11/02 23:26:15 by aait-our         ###   ########.fr       */
+/*   Updated: 2024/11/04 14:59:21 by aait-our         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
-	unsigned int	i;
-	unsigned int	srclen;
-	unsigned int	dstlen;
+	size_t	i;
+	size_t	srclen;
+	size_t	dstlen;
 
-	srclen = ft_strlen(src);
-	dstlen = ft_strlen(dest);
 	if (!src)
 		return (0);
+	srclen = ft_strlen(src);
+	if (size == 0)
+		return (srclen);
 	i = 0;
 	while (src[i] && i < size - 1)
 	{
@@ -32,9 +33,11 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 	return (srclen);
 }
 
-/*int main( {
-	char dst[20];
-	char src[] = "Hello, ";
-	printf("%d\n", ft_strlcpy(dst, src, 10));
+/*int	main(void)
+{
+	char	dst[20];
+	char	src[] = "Hello, ";
+
+	printf("%d\n", ft_strlcpy(dst, src, 0));
 	printf("%s\n", dst);
 }*/

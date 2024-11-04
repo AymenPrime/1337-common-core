@@ -6,7 +6,7 @@
 /*   By: aait-our <aait-our@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 12:54:51 by aait-our          #+#    #+#             */
-/*   Updated: 2024/11/04 12:54:58 by aait-our         ###   ########.fr       */
+/*   Updated: 2024/11/04 15:50:58 by aait-our         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	len_s1 = ft_strlen(s1);
 	len_s2 = ft_strlen(s2);
 	str = malloc(sizeof(char) * (len_s1 + len_s2 + 1));
+	i = 0;
 	while (s1[i])
 	{
 		str[i] = s1[i];

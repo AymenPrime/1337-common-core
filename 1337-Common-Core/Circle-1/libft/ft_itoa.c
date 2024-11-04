@@ -6,7 +6,7 @@
 /*   By: aait-our <aait-our@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 20:38:07 by aait-our          #+#    #+#             */
-/*   Updated: 2024/11/02 23:14:10 by aait-our         ###   ########.fr       */
+/*   Updated: 2024/11/04 16:36:53 by aait-our         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,40 +33,44 @@ static int	len(int num)
 	return (i);
 }
 
-/*int main() {
-	int nb = -4546;
-	printf("%d\n", len(nb));
-}*/
-
+// int main() {
+// 	int nb = -4546;
+// 	printf("%d\n", len(nb));
+// }
 char	*ft_itoa(int nb)
 {
 	int		i;
 	int		leng;
-	int		n;
+	long	n;
 	char	*new;
 
-	leng = len(nb);
+	n = nb;
+	leng = len(n);
 	new = (char *)malloc(leng + 1);
-	if (nb < 0)
-		n = -nb;
-	else
-		n = nb;
+	if (!new)
+		return (NULL);
+	new[leng] = '\0';
+	if (n == 0)
+		new[0] = '0';
+	else if (n < 0)
+	{
+		new[0] = '-';
+		n = -n;
+	}
 	i = leng - 1;
-	while (i >= 0)
+	while (n != 0)
 	{
 		new[i] = (n % 10) + '0';
-		n /= 10;
-		if (nb < 0 && i == 0)
-			new[i] = '-';
+		n = n /= 10;
 		i--;
 	}
 	return (new);
 }
 
-int	main(void)
-{
-	int	nb;
+// int	main(void)
+// {
+// 	int	nb;
 
-	nb = -4546;
-	printf("%s\n", ft_itoa(nb));
-}
+// 	nb = -4546;
+// 	printf("%s\n", ft_itoa(nb));
+// }
