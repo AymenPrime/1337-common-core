@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: aait-our <aait-our@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 23:32:02 by aait-our          #+#    #+#             */
-/*   Updated: 2024/11/03 23:42:37 by marvin           ###   ########.fr       */
+/*   Updated: 2024/11/04 12:40:43 by aait-our         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,7 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (str);
 }
-
-int	main(void)
+/*int	main(void)
 {
 	char ptr[10];
 	int i = 0;
@@ -45,4 +44,4 @@ int	main(void)
 		i++;
 	}
 	printf("\n");
-}
+}*/

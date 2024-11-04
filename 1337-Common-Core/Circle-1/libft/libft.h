@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: aait-our <aait-our@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 23:20:27 by aait-our          #+#    #+#             */
-/*   Updated: 2024/11/04 10:24:52 by marvin           ###   ########.fr       */
+/*   Updated: 2024/11/04 12:51:31 by aait-our         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,15 +47,16 @@ char			*ft_strnstr(const char *haystack, const char *needle,
 					size_t len);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
 char			*ft_strdup(const char *s);
-char 			*ft_strjoin(char const *s1, char const *s2);
-char    		*ft_strtrim(char const *s1, char const *set);
-char 			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
-void			ft_striteri(char *s, void (*f)(unsigned int, char*));
+char			*ft_strjoin(char const *s1, char const *s2);
+char			*ft_strtrim(char const *s1, char const *set);
+char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void			ft_striteri(char *s, void (*f)(unsigned int, char *));
 static int		len(int num);
 char			*ft_itoa(int nb);
 int				ft_tolower(int c);
 int				ft_toupper(int c);
-void ft_putchar_fd(char c, int fd);
-void ft_putstr_fd(char *s, int fd);
-void ft_putendl_fd(char *s, int fd);
+void			ft_putchar_fd(char c, int fd);
+void			ft_putstr_fd(char *s, int fd);
+void			ft_putendl_fd(char *s, int fd);
+
 #endif
