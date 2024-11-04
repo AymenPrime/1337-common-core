@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 23:20:27 by aait-our          #+#    #+#             */
-/*   Updated: 2024/11/03 23:53:37 by marvin           ###   ########.fr       */
+/*   Updated: 2024/11/04 10:24:52 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ static int		len(int num);
 char			*ft_itoa(int nb);
 int				ft_tolower(int c);
 int				ft_toupper(int c);
-void			ft_putchar_fd(char c, int fd);
-
+void ft_putchar_fd(char c, int fd);
+void ft_putstr_fd(char *s, int fd);
+void ft_putendl_fd(char *s, int fd);
 #endif
