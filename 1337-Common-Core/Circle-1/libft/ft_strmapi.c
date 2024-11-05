@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aait-our <aait-our@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 12:42:22 by aait-our          #+#    #+#             */
-/*   Updated: 2024/11/04 12:46:03 by aait-our         ###   ########.fr       */
+/*   Updated: 2024/11/04 23:54:05 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	int		len;
 
 	if (!s || !f)
-	{
 		return (NULL);
-	}
+	
 	len = ft_strlen(s);
 	new = malloc((len + 1) * sizeof(char));
 	if (!new)
 		return (NULL);
+	i = 0;
 	while (s[i])
 	{
 		new[i] = f(i, s[i]);

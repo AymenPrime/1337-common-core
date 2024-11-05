@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aait-our <aait-our@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 12:49:27 by aait-our          #+#    #+#             */
-/*   Updated: 2024/11/04 12:53:06 by aait-our         ###   ########.fr       */
+/*   Updated: 2024/11/05 00:40:33 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,29 @@
 
 void	ft_putnbr_fd(int nb, int fd)
 {
-	if (nb < 0)
+	long n;
+
+	n = nb;
+	if (n < 0)
 	{
 		ft_putchar_fd('-', fd);
-		nb = -nb;
+		n = -n;
 	}
-	if (nb >= 10)
+	if (n >= 10)
 	{
-		ft_putnbr_fd(nb / 10, fd);
-		nb = nb % 10;
+		ft_putnbr_fd(n / 10, fd);
+		n = n % 10;
 	}
-	if (nb < 10)
-		ft_putchar_fd(nb + 48, fd);
+	if (n < 10)
+		ft_putchar_fd(n + 48, fd);
 }
 /*#include <fcntl.h>
 int	main(void)
 {
 	int fd = open("text.txt", O_WRONLY | O_APPEND | O_CREAT, 0640);
 	ft_putnbr_fd(10, fd);
+	ft_putnbr_fd(-10, fd);
+	ft_putnbr_fd(50000, fd);
+	ft_putnbr_fd(0, fd);
+	ft_putnbr_fd(1, fd);
 }*/

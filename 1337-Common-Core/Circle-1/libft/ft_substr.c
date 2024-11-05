@@ -3,77 +3,49 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aait-our <aait-our@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 21:01:56 by aait-our          #+#    #+#             */
-/*   Updated: 2024/11/04 17:23:24 by aait-our         ###   ########.fr       */
+/*   Updated: 2024/11/05 00:06:57 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
-	char	*sub;
+ 	size_t	k;
+ 	char	*r;
 
-	i = 0;
-	while (s[i])
-		i++;
-	if (i < len)
-		len = i;
-	if (start >= i)
-	{
-		sub = malloc(1);
-		if (!sub)
-			return (NULL);
-		sub[0] = '\0';
-		return (sub);
+ 	if(s == NULL)
+ 		return (NULL);
+	if(start >= ft_strlen(s)) {
+		r = (char *)malloc(1);
+		r[0] = '\0';
+		return (r);
 	}
-	sub = (char *)malloc(len + 1);
-	if (!sub)
+	if (ft_strlen(s) - start < len)
+        len = ft_strlen(s) - start;
+	r = (char *)malloc(sizeof(char) * (len + 1));
+ 	if (!r)
 		return (NULL);
 	i = 0;
-	while (len--)
+	k = 0;
+	while (s[i])
 	{
-		sub[i] = s[start++];
+		if (i >= start && k < len)
+		{
+			r[k] = s[i];
+			k++;
+		}
 		i++;
-	}
-	sub[i] = '\0';
-	return (sub);
+		}
+		r[k] = '\0';
+	return (r);
 }
-
-// char	*ft_substr(char const *s, unsigned int start, size_t len)
-// {
-// 	size_t	i;
-// 	size_t	k;
-// 	char	*r;
-
-// 	if(s == NULL)
-// 		return (NULL);
-// 	// if(start >= ft_strlen(s)) {
-// 	// 	r = (char *)malloc(1);
-// 	// 	if(!r)
-// 	// }
-// 	r = (char *)malloc(sizeof(char) * (len + 1));
-// 	if (!r)
-// 		return (NULL);
-// 	i = 0;
-// 	k = 0;
-// 	while (s[i])
-// 	{
-// 		if (i >= start && k < len)
-// 		{
-// 			r[k] = s[i];
-// 			k++;
-// 		}
-// 		i++;
-// 	}
-// 	r[k] = '\0';
-// 	return (r);
-// }
-int	main(void)
+/*int	main(void)
 {
-	char *str = "0123456789";
-	printf("%s", ft_substr("42", 0, 0));
-}
+	//char *str = "0123456789";
+	printf("%s", ft_substr("Hello, World!", 8, 10));
+}*/
