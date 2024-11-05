@@ -3,49 +3,69 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: aait-our <aait-our@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 21:01:56 by aait-our          #+#    #+#             */
-/*   Updated: 2024/11/05 00:06:57 by marvin           ###   ########.fr       */
+/*   Updated: 2024/11/05 18:21:26 by aait-our         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
- char	*ft_substr(char const *s, unsigned int start, size_t len)
+static char	*bounds(char const *s, unsigned int start)
 {
-	size_t	i;
- 	size_t	k;
- 	char	*r;
+	char	*r;
 
- 	if(s == NULL)
- 		return (NULL);
-	if(start >= ft_strlen(s)) {
+	if (start >= ft_strlen(s))
+	{
 		r = (char *)malloc(1);
-		r[0] = '\0';
+		if (r)
+			r[0] = '\0';
 		return (r);
 	}
-	if (ft_strlen(s) - start < len)
-        len = ft_strlen(s) - start;
-	r = (char *)malloc(sizeof(char) * (len + 1));
- 	if (!r)
-		return (NULL);
+	return (NULL);
+}
+
+static char	*cpy_string(char const *s, unsigned int start, size_t len)
+{
+	size_t	i;
+	size_t	k;
+	char	*r;
+
 	i = 0;
 	k = 0;
-	while (s[i])
+	r = (char *)malloc(sizeof(char) * (len + 1));
+	if (!r)
+		return (NULL);
+	while (s[i] && k < len)
 	{
-		if (i >= start && k < len)
+		if (i >= start)
 		{
 			r[k] = s[i];
 			k++;
 		}
 		i++;
-		}
-		r[k] = '\0';
+	}
+	r[k] = '\0';
 	return (r);
 }
-/*int	main(void)
+
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	//char *str = "0123456789";
-	printf("%s", ft_substr("Hello, World!", 8, 10));
-}*/
+	char	*r;
+
+	if (!s)
+		return (NULL);
+	r = bounds(s, start);
+	if (r)
+		return (r);
+	if (ft_strlen(s) - start < len)
+		len = ft_strlen(s) - start;
+	return (cpy_string(s, start, len));
+}
+// #include <string.h>
+// int	main(void)
+// {
+// 	//char *str = "0123456789";
+// 	printf("%s\n", ft_substr("Hello, World!", 20, 10));
+// }

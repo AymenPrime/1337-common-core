@@ -6,7 +6,7 @@
 /*   By: aait-our <aait-our@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 20:34:37 by aait-our          #+#    #+#             */
-/*   Updated: 2024/11/04 20:39:07 by aait-our         ###   ########.fr       */
+/*   Updated: 2024/11/05 22:19:22 by aait-our         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,30 +34,26 @@ static int	ft_count_word(char const *s, char c)
 	}
 	return (count);
 }
-/*int main() {
-	char str[] = "jfjd jfj fj";
-	printf("%d\n", ft_count_word(str, 'f'));
-}*/
+
 static char	*alloc_word(char const *s, char c)
 {
 	char	*word;
 	int		len;
 	int		i;
-	int		j;
 
-	j = 0;
-	while (s[j] && s[j] != c)
-		j++;
+	len = 0;
+	while (s[len] && s[len] != c)
+		len++;
 	i = 0;
-	word = (char *)malloc(j + 1);
+	word = (char *)malloc(len + 1);
 	if (!word)
 		return (NULL);
-	while (i < j)
+	while (i < len)
 	{
 		word[i] = s[i];
 		i++;
 	}
-	word[j] = '\0';
+	word[i] = '\0';
 	return (word);
 }
 
@@ -76,7 +72,7 @@ static int	first_split(char **str, char const *s, char c)
 			if (!str[j])
 				return (0);
 			j++;
-			while(s[i] && s[i] != c)
+			while (s[i] && s[i] != c)
 				i++;
 		}
 		else
@@ -97,11 +93,17 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	if (!first_split(strs, s, c))
 	{
+		while (strs[i])
+		{
+			free(strs[i]);
+			i++;
+		}
 		free(strs);
 		return (NULL);
 	}
 	return (strs);
 }
+
 // int	main(void)
 // {
 // 	char	**x;

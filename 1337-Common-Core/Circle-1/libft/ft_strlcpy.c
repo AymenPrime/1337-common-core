@@ -6,7 +6,7 @@
 /*   By: aait-our <aait-our@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 15:40:21 by aait-our          #+#    #+#             */
-/*   Updated: 2024/11/04 14:59:21 by aait-our         ###   ########.fr       */
+/*   Updated: 2024/11/05 17:04:40 by aait-our         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
 	size_t	i;
 	size_t	srclen;
-	size_t	dstlen;
 
 	if (!src)
 		return (0);

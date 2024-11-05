@@ -6,12 +6,11 @@
 /*   By: aait-our <aait-our@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 20:38:07 by aait-our          #+#    #+#             */
-/*   Updated: 2024/11/04 16:36:53 by aait-our         ###   ########.fr       */
+/*   Updated: 2024/11/05 20:56:55 by aait-our         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static int	len(int num)
 {
@@ -39,7 +38,6 @@ static int	len(int num)
 // }
 char	*ft_itoa(int nb)
 {
-	int		i;
 	int		leng;
 	long	n;
 	char	*new;
@@ -57,12 +55,10 @@ char	*ft_itoa(int nb)
 		new[0] = '-';
 		n = -n;
 	}
-	i = leng - 1;
 	while (n != 0)
 	{
-		new[i] = (n % 10) + '0';
-		n = n /= 10;
-		i--;
+		new[--leng] = (n % 10) + '0';
+		n /= 10;
 	}
 	return (new);
 }

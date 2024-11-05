@@ -6,7 +6,7 @@
 /*   By: aait-our <aait-our@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 10:48:32 by aait-our          #+#    #+#             */
-/*   Updated: 2024/11/02 23:14:13 by aait-our         ###   ########.fr       */
+/*   Updated: 2024/11/05 17:13:41 by aait-our         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,17 +25,18 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	{
 		if (str[i] == ch)
 		{
-			return ((void *)str + i);
+			return ((void *)&str[i]);
 		}
 		i++;
 	}
 	return (NULL);
 }
+// #include <string.h>
+// int    main()
+// {
+//     const char    p[] = "hello, world!";
+//     char    *test = (void *)memchr(p, ',', 14);
+//     char    *res = (void *)ft_memchr(p, ',', 14);
 
-/*int main() {
-	const char *str = "Hello, World!";
-	char ch = 's';
-	//char *ptr = ft_memchr(str, ch, 14);
-	printf("%s\n", ft_memchr(str, 's', 14));
-	//printf("%p\n", ptr);
-}*/
+//     printf("%s\n %s\n", test, res);
+// }
